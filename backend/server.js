@@ -12,12 +12,13 @@ app.use(express.json())
 // Option.1
 // app.use(cors())
 // option2
-app.use(cors({
+app.use(cors());
+/* {
   origin: 'http://localhost:5173',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type']
-}))
-
+} 
+*/
 
 app.use('/api/v1', booksRoute)
 
