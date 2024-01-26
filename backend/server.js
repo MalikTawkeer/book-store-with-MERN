@@ -28,11 +28,11 @@ app.get("/", (req, res) => {
 });
 
 
-
+//'mongodb://127.0.0.1/bookStore'
 //db connection
 ;(() => {
   mongoose
-    .connect('mongodb://127.0.0.1/bookStore')
+    .connect(MONGO_DB_URL)
     .then(() => {
       console.log("CONNECTED:: SUCCESS;;");
       app.listen(PORT, () => {
