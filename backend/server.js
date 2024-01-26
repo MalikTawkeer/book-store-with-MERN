@@ -35,7 +35,7 @@ app.get("/", (req, res) => {
     .connect(MONGO_DB_URL)
     .then(() => {
       console.log("CONNECTED:: SUCCESS;;");
-      app.listen(PORT, () => {
+      app.listen(process.env.PORT, () => {
         console.log(`App is listing to port ${PORT}`);
       });
     })
